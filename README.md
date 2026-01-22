@@ -1,131 +1,215 @@
-# 🏚️ 🍌 AI Home Renovation Planner Agent 
+🏡✨ AI-Powered Home Renovation Planner (Multi-Agent System)
 
-### 🎓 FREE Step-by-Step Tutorial 
-**👉 [Click here to follow our complete step-by-step tutorial](https://www.theunwindai.com/p/build-an-ai-home-renovation-planner-agent-using-nano-banana) and learn how to build this from scratch with detailed code walkthroughs, explanations, and best practices.**
 
-A multi-agent system built with Google ADK that analyzes photos of your space, creates personalized renovation plans, and generates photorealistic renderings using Gemini 3 Flash and Gemini 3 Pro's multimodal capabilities.
+A production-style AI Home Renovation Planner Agent powered by Google ADK that:
 
-## Features
+Understands room photos, inspiration images, and text
 
-- **🔍 Smart Image Analysis**: Upload room photos and inspiration images - agent automatically detects and analyzes them
-- **🎨 Photorealistic Rendering**: Generates professional-quality images of your renovated space using Gemini 3 Pro
-- **💰 Budget-Aware Planning**: Tailors recommendations to your budget constraints
-- **📊 Complete Roadmap**: Provides timeline, budget breakdown, contractor list, and action checklist
-- **🤖 Multi-Agent Orchestration**: Demonstrates Coordinator/Dispatcher + Sequential Pipeline patterns
-- **✏️ Iterative Refinement**: Edit generated renderings based on feedback
+Creates budget-aware renovation plans
 
-## How It Works
+Generates professional photorealistic renderings
 
-The system uses a **Coordinator/Dispatcher pattern** with three specialized agents:
+Produces a complete renovation roadmap
 
-1. **Visual Assessor** 📸
-   - Analyzes uploaded room photos (layout, condition, dimensions)
-   - Extracts style from inspiration images
-   - Estimates costs and identifies improvement opportunities
+Supports iterative design feedback
 
-2. **Design Planner** 🎨
-   - Creates budget-appropriate design plans
-   - Specifies exact materials, colors, and fixtures
-   - Prioritizes high-impact changes
+This project demonstrates how modern agentic AI systems are actually built—not toy demos.
 
-3. **Project Coordinator** 🏗️
-   - Generates comprehensive renovation roadmap
-   - Creates photorealistic rendering of renovated space
-   - Provides budget breakdown, timeline, and action steps
+✨ Key Features
+🔍 Intelligent Image & Space Analysis
 
-## Quick Start
+Upload room photos or inspiration images
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Shubhamsaboo/awesome-llm-apps.git
-   cd awesome-llm-apps/advanced_ai_agents/multi_agent_apps/ai_home_renovation_agent
-   ```
+Automatically detects layout, size, condition, and style
 
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+Identifies improvement opportunities
 
-3. **Set up your API key**
-   ```bash
-   export GOOGLE_API_KEY="your_gemini_api_key"
-   ```
-   Or create a `.env` file:
-   ```
-   GOOGLE_API_KEY=your_gemini_api_key
-   ```
+🎨 Photorealistic Design Generation
 
-4. **Launch ADK Web** 
-   ```bash
-   cd multi_agent_apps
-   adk web
-   ```
+Creates high-quality renovation renderings using Gemini 3 Pro
 
-5. **Open browser** and select "ai_home_renovation_agent"
+Supports iterative visual edits (colors, lighting, flooring, fixtures)
 
-## Usage Examples
+💰 Budget-Aware Planning
 
-### Scenario 1: Current Room + Budget
-```
-[Upload photo of your kitchen]
-"What can I improve here with a $5k budget?"
-```
-→ Agent analyzes your space, suggests budget-friendly improvements, generates rendering
+Tailors recommendations based on budget constraints
 
-### Scenario 2: Room + Inspiration
-```
-[Upload photo 1: your kitchen]
-[Upload photo 2: Pinterest inspiration]
-"Transform my kitchen to look like this. What's the cost?"
-```
-→ Agent extracts style from inspiration, applies to your room, provides budget + rendering
+Prioritizes high-impact upgrades
 
-### Scenario 3: Text Only
-```
-"Renovate my 10x12 kitchen with oak cabinets and laminate counters. 
-Want modern farmhouse style with white shaker cabinets. Budget: $30k"
-```
-→ Agent creates design plan and generates rendering from description
+Provides realistic cost estimates
 
-### Scenario 4: Iterative Refinement
-```
-[After initial rendering]
+📊 End-to-End Renovation Roadmap
+
+Budget breakdown
+
+Timeline estimation
+
+Contractor & material checklist
+
+Step-by-step action plan
+
+🤖 Real Multi-Agent Architecture
+
+Coordinator / Dispatcher pattern
+
+Sequential pipeline for complex workflows
+
+Modular, extensible, and production-ready
+
+🧠 System Architecture Overview
+
+The system uses a Coordinator + Sequential Multi-Agent Pipeline:
+
+Coordinator (Root Agent)
+    ├── Info Agent (Quick Q&A)
+    └── Renovation Planning Pipeline
+          ├── Visual Assessor Agent
+          ├── Design Planner Agent
+          └── Project Coordinator Agent
+
+Why This Architecture?
+
+✅ Runs only the agents needed per request
+
+✅ Clear separation of responsibilities
+
+✅ Easy to extend (new tools, agents, workflows)
+
+✅ Mirrors real-world agentic AI systems
+
+🧩 Agent Responsibilities
+📸 1. Visual Assessor Agent
+
+Analyzes uploaded room photos
+
+Extracts:
+
+Layout & dimensions
+
+Condition & constraints
+
+Style cues from inspiration images
+
+Identifies renovation opportunities
+
+Provides rough cost estimates
+
+🎨 2. Design Planner Agent
+
+Creates a renovation design aligned with:
+
+Budget
+
+Style preferences
+
+Space constraints
+
+Specifies:
+
+Materials
+
+Colors
+
+Fixtures
+
+High-impact upgrades
+
+🏗️ 3. Project Coordinator Agent
+
+Generates:
+
+Photorealistic renovation renderings
+
+Budget breakdown
+
+Project timeline
+
+Action checklist
+
+Handles iterative design updates and refinements
+
+⚙️ Tech Stack & Capabilities
+
+Google ADK – Multi-agent orchestration
+
+Gemini 3 Flash – Fast reasoning & planning
+
+Gemini 3 Pro – Multimodal image generation & refinement
+
+Tool Calling:
+
+google_search
+
+estimate_renovation_cost
+
+calculate_timeline
+
+generate_renovation_rendering
+
+edit_renovation_rendering
+
+Versioned Artifacts – Automatic tracking of design iterations
+
+🛠️ Step-by-Step Setup
+1️⃣ Clone the Repository
+git clone https://github.com/Shubhamsaboo/awesome-llm-apps.git
+cd awesome-llm-apps/advanced_ai_agents/multi_agent_apps/ai_home_renovation_agent
+
+2️⃣ Install Dependencies
+pip install -r requirements.txt
+
+3️⃣ Configure Gemini API Key
+export GOOGLE_API_KEY="your_gemini_api_key"
+
+
+Or create a .env file:
+
+GOOGLE_API_KEY=your_gemini_api_key
+
+4️⃣ Launch the ADK Web Interface
+cd multi_agent_apps
+adk web
+
+5️⃣ Open Your Browser
+
+Select ai_home_renovation_agent from the ADK interface.
+
+🧪 Example Use Cases
+🟢 Scenario 1: Room Photo + Budget
+[Upload kitchen photo]
+"What can I improve here with a $5,000 budget?"
+
+
+➡️ Space analysis → budget-friendly recommendations → rendering
+
+🟢 Scenario 2: Room + Inspiration Image
+[Upload your kitchen photo]
+[Upload Pinterest inspiration]
+"Make my kitchen look like this. What's the cost?"
+
+
+➡️ Style extraction → tailored plan → rendering + budget
+
+🟢 Scenario 3: Text-Only Planning
+"Renovate my 10x12 kitchen.
+Modern farmhouse style, white shaker cabinets.
+Budget: $30k"
+
+
+➡️ Design plan → rendering → full roadmap
+
+🟢 Scenario 4: Iterative Refinement
 "Make the cabinets cream instead of white"
 "Add pendant lights over the island"
-"Change flooring to lighter oak"
-```
-→ Agent refines the rendering with your feedback
+"Use lighter oak flooring"
 
-## Sample Prompts
-- "I want to renovate my small galley kitchen. It's 8x12 feet, has oak cabinets from the 90s. I love modern farmhouse style. Budget: $25k"
-- "My master bathroom is tiny (5x8) with a cramped tub. I want a spa-like retreat with walk-in shower. Budget: $15k"
-- "Transform my boring bedroom into a cozy retreat. Thinking accent wall, new flooring. Budget: $12k"
 
-## Tools & Capabilities
+➡️ Updated renderings with version history
 
-- **google_search**: Finds renovation costs, materials, and trends
-- **estimate_renovation_cost**: Calculates costs by room type and scope
-- **calculate_timeline**: Estimates project duration
-- **generate_renovation_rendering**: Creates photorealistic renderings
-- **edit_renovation_rendering**: Refines renderings based on feedback
-- **Versioned artifacts**: Automatic version tracking for all renderings
+✍️ Sample Prompts
 
-## Multi-Agent Pattern
+“I want to renovate my small galley kitchen (8x12). Modern farmhouse style. Budget: $25k.”
 
-Demonstrates **Coordinator/Dispatcher + Sequential Pipeline**:
+“Turn my tiny bathroom (5x8) into a spa-like retreat with a walk-in shower. Budget: $15k.”
 
-```
-Coordinator (Root Agent)
-    ├── Info Agent (quick Q&A)
-    └── Planning Pipeline (Sequential)
-          ├── Visual Assessor (image analysis)
-          ├── Design Planner (specifications)
-          └── Project Coordinator (rendering + roadmap)
-```
-
-**Why this pattern?**
-- Efficient: Only runs workflows that are needed
-- Modular: Each agent has clear responsibilities
-- Scalable: Easy to add new features
-- Production-ready: Real-world agentic system pattern
-
+“Redesign my bedroom with an accent wall and new flooring. Budget: $12k.”
